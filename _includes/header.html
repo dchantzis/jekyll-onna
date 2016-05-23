@@ -1,0 +1,31 @@
+<div class="header-wrapper pad-t-1-2">
+
+  <div class="nav-xs-s-wrapper">
+    <input type="checkbox" class="mobile-nav-toggle-box" name="mobile-nav-toggle" id="mobileNavToggle">
+    <label for="mobileNavToggle" class="mobile-nav-toggle-label show-on-scroll-mobile">
+      <div class="top-bar"></div>
+      <div class="middle-bar"></div>
+      <div class="bottom-bar"></div>
+    </label>
+    <div class="nav-container">
+      <nav class="nav nav-xs-s pad-t-2 pad-b text-center" id="nav">
+        {% include navigation.html navType='xs-s' %}
+      </nav>
+    </div>
+  </div>
+
+  <header class="masthead pad-t-1-2">
+    {% if '/' == page.url %}
+      <h1 class="push-0 logo-header text-center text-upper kilo">{{ site.website-title }}</h1>
+    {% else %}
+      <h2 class="push-0 logo-header text-center text-upper kilo">{{ site.website-title }}</h2>
+    {% endif %}
+  </header>
+
+  <div class="nav-m-l-xl-wrapper push-0">
+    <nav class="nav nav-m-l-xl text-center" id="nav">
+      {% include navigation.html navType='xs-m-l-xl' %}
+    </nav>
+  </div>
+
+</div>

@@ -1,0 +1,39 @@
+<section class="section-media push-2">
+
+  <div class="grid grid-stretch {{video.title | slugify}}">
+
+    <div class="unit [ xs-1 s-1 m-1 l-3-4 ] push-1-2">
+      <div class="embed embed--16by9">
+        <iframe class="embed__item" src="{{ video.video-url }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="unit [ xs-1 s-1 m-1 l-1-4 ] pad-b-1-2 text-center">
+      <div class="grid">
+
+        <div class="unit [ xs-1 s-1 m-1-2 l-1 xl-1 ] section-text">
+          <h3 class="push-0 text-upper micro">{{ video.description.header }}</h3>
+          {% for line in video.description.lines %}
+            <div class="push-0 micro section-description">{{ line | newline_to_br | markdownify }}</div>
+          {% endfor %}
+        </div>
+
+        {% if video.description.links.size %}
+        <div class="unit [ xs-1 s-1 m-1-2 l-1 xl-1 ] section-text">
+          <h4 class="push-0 micro">links:</h4>
+          <ul class="list-group micro section-links brand-family ">
+          {% for link in video.description.links %}
+            <li class="list-group__item">
+              <a href="{{link.href}}" {% if true == link.external %}target="_blank"{% endif %}>{{link.text}}</a>
+            </li>
+          {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+
+  </div>
+</section>
+

@@ -1,0 +1,58 @@
+---
+layout: page
+title: About
+titleBefore:
+titleAfter:
+meta: Page description
+author:
+image:
+keywords:
+includeInNavigation: true
+weight: 5
+profile-image: https://placeholdit.imgix.net/~text?txtsize=84&bg=cccccc&txt=559x740&w=559&h=740
+bio: |
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at suscipit ipsum, et elementum neque. Vestibulum erat arcu, aliquet a posuere quis, facilisis vitae dui. Nullam eget leo sed arcu commodo molestie. Duis a lorem vitae arcu molestie ullamcorper et sit amet ipsum. Donec fermentum euismod diam, ac mollis eros sagittis at. Ut varius ligula blandit nulla ullamcorper, non lobortis risus viverra. Nullam lacinia in purus non ullamcorper. Donec dapibus, felis viverra tincidunt auctor, velit ante commodo augue, nec varius risus sem eget quam. Fusce in lorem a odio molestie feugiat sit amet sit amet neque. In non magna ipsum.
+
+  Pellentesque nisl erat, maximus sit amet faucibus nec, convallis ac urna. Maecenas porttitor augue ut efficitur porta. Mauris et tellus a turpis rhoncus condimentum quis in quam. In tempor auctor tristique. Nulla mattis enim sit amet lectus ultricies, in fringilla quam porta. Nullam sit amet arcu sed velit ornare varius. Duis eu gravida mauris. Vivamus semper eget velit id dignissim. Phasellus eget efficitur mi.
+description: |
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+  Vestibulum at suscipit ipsum, et elementum neque.
+
+  Vestibulum erat arcu, aliquet a posuere quis, facilisis vitae dui.
+sitemap:
+  lastMod: 2016-01-01
+  priority: 0.7
+  changeFreq: monthly
+  include: true
+---
+
+<section class="section-media">
+
+  <div class="grid grit-bottom">
+
+    <div class="unit [ xs-1 s-1 m-1 l-3-4 ] push-1-2">
+
+      <div class="grid">
+        <div class="unit [ xs-1 s-1 m-1-2 l-1-2 ] push-1-2 section-profile-picture">
+          <div class="embed embed-iso216">
+            <img class="embed-item img-flex" src="{{ page.profile-image }}" alt="">
+          </div>
+        </div>
+
+        <div class="unit [ xs-1 s-1 m-1-2 l-1-2 ] section-text text-center">
+          <div class="push-0 micro section-description">{{ page.bio | newline_to_br | markdownify }}</div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="unit [ xs-1 s-1 m-1-2 l-1-4 ] section-text text-center">
+      <h3 class="push-0 text-upper micro">{{ site.website-title }}</h3>
+      <div class="push-0 micro section-description">{{ page.description | newline_to_br | markdownify }}</div>
+    </div>
+
+  </div>
+
+</section>

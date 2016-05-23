@@ -1,0 +1,42 @@
+---
+layout: page
+title: News
+titleBefore:
+titleAfter:
+meta:
+author:
+image:
+keywords:
+priority: 1.0
+includeInNavigation: true
+weight: 3
+---
+
+<section class="post">
+  <div class="grid">
+
+    <div class="unit [ xs-1 s-1 m-2-3 ] ">
+
+      {% for post in paginator.posts %}
+        <article class="push-2 text-center">
+          <h2 class="brand-highlight push-1-4 kilo">
+            <a href="{{site.baseurl}}{{post.url}}">{{post.title | strip | upcase}}</a>
+          </h2>
+          <p class="milli push-1-2">{{ post.date | date: "%B %d, %Y" }}</p>
+          <div class="push-0 micro p-container">{{ post.content | markdownify }}</div>
+        </article>
+      {% endfor %}
+
+      {% include pagination/default-post-pagination.html %}
+
+    </div>
+
+    <div class="unit [ xs-1 s-1 m-1-3 ] ">
+      <aside class="aside-container">
+      </aside>
+    </div>
+
+  </div>
+
+</section>
+

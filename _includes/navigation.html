@@ -1,0 +1,13 @@
+{% assign site-pages = site.pages | sort:"weight"  %}
+<ul class="list-group push-0 brand-family">
+  {% for item in site-pages %}
+    {% if item.url contains "page2" %}{% continue %}{% endif %}
+    {% if true == item.includeInNavigation %}
+      <li class="list-group__item {% if include.navType == 'xs-m-l-xl' or include.navType == 'footer' %}micro{% endif %}">
+        <a class="gutter-1-2 pad-t-1-2 pad-b-1-2 {% if page.url contains item.url %}current{% endif %}" href="{{ site.baseurl }}{{ item.url }}">
+          {{ item.title | downcase }}
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

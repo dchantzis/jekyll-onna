@@ -1,0 +1,20 @@
+<section class="section-media push-2">
+
+  <div class="grid grid-stretch">
+    <div class="unit [ xs-1 s-1 m-1 l-3-4 ] push-1-2">
+      {% if page.include-google-map %}
+        <div class="embed embed--16by9" id="map"></div>
+      {% endif %}
+    </div>
+
+    <div class="unit [ xs-1 s-1 m-1 l-1-4 ] pad-b-1-2 text-center">
+      <div class="grid">
+        <div class="unit [ xs-1 s-1 m-1-2 l-1 xl-1 ] section-text text-center">
+          <h3 class="push-0 text-upper micro">{{site.website-title}}</h3>
+          <div class="push-0 micro section-description">{{ page.description | newline_to_br | markdownify}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

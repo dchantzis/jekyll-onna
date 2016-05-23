@@ -1,0 +1,29 @@
+---
+layout: page
+title: Contact
+titleBefore:
+titleAfter:
+meta: "Contact information"
+author:
+image:
+keywords:
+includeInNavigation: true
+weight: 6
+description: |
+  [contact@demo.email](mailto:contact@your.email)
+  first-name last-name
+  city
+  country
+include-google-map: true
+sitemap:
+  lastMod: 2016-01-01
+  priority: 0.7
+  changeFreq: monthly
+  include: true
+---
+
+{% if page.include-google-map %}
+  {% include map-and-text.html %}
+{% else %}
+  {% include just-text.html %}
+{% endif %}

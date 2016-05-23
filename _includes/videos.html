@@ -1,0 +1,5 @@
+{% assign videos = site.videos | sort:"video-order"  %}
+
+{% for video in videos %}
+  {% include video.html %}
+{% endfor %}

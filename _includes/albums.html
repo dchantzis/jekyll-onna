@@ -1,0 +1,5 @@
+{% assign albums = site.albums | sort:"album-order"  %}
+
+{% for album in albums %}
+  {% include album.html %}
+{% endfor %}
