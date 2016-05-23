@@ -19,7 +19,6 @@ This theme includes the following:
 - Google fonts (PT Sans)
 - Syntax highlighting
 - Pure CSS toggleable navigation
-- Separate sitemap page
 - Lightbox presentation for image albums
 - Social media share buttons for posts
 - Disqus comments
