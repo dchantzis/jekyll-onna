@@ -15,7 +15,7 @@ This theme includes the following:
 - Easily scalable text and component sizing with rem units in the CSS
 - Paginations
 - Related posts
-- Integrating Google analytics and Google maps
+- Integrating Google analytics and themed Google maps
 - Google fonts (PT Sans)
 - Syntax highlighting
 - Pure CSS toggleable navigation
