@@ -1,5 +1,7 @@
 # README
 
+## **"Onna"** | Responsive Multi-Purpose Jekyll Creative Theme
+
 ### Jekyll theme specifically created for portfolio websites, utilizing Jekyll collections for image albums and videos.
 **Built: Early 2016**
 
